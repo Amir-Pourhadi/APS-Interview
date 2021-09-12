@@ -23,7 +23,10 @@ const App = () => {
           path="/name"
           render={(props) => <Name {...props} updateUser={updateUser} userName={user.name} />}
         />
-        <Route path="/animals" component={Animals} />
+        <Route
+          path="/animals"
+          render={(props) => <Animals {...props} userName={user.name} />}
+        />
         <Route path="/sort-list" component={SortList} />
       </Switch>
     </div>
