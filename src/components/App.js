@@ -64,27 +64,25 @@ const App = () => {
 
 export default App;
 
-const Container = styled.div`
-  width: 100vw;
-  min-height: 100vh;
-`;
+const Container = styled.div({
+  width: "100vw",
+  minHeight: "100vh",
+});
 
-const Rect = styled.div.attrs((props) => ({
-  style: {
-    transition: props.isDragging ? "none" : "all 500ms",
-  },
-}))`
-  width: 300px;
-  user-select: none;
-  height: ${HEIGHT}px;
-  background: #fff;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: ${({ top }) => 100 + top}px;
-  left: calc(50vw - 150px);
-  font-size: 20px;
-  color: #777;
-`;
+const Rect = styled.div.attrs(({ isDragging }) => ({
+  style: { transition: isDragging ? "none" : "all 500ms" },
+}))({
+  width: 300,
+  height: `${HEIGHT}px`,
+  background: "#fff",
+  boxShadow: "0 5px 10px rgba(0, 0, 0, 0.15)",
+  userSelect: "none",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  position: "absolute",
+  top: ({ top }) => 100 + top + "px",
+  left: "calc(50vw - 150px)",
+  fontSize: 20,
+  color: "#777",
+});
