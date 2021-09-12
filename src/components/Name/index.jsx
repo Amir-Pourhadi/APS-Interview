@@ -5,7 +5,7 @@ const Name = () => {
     <div>
       Hello, Enter your name below:
       <form>
-        <label for="name-input">My name is: </label>
+        <label htmlFor="name-input">My name is: </label>
         <input id="name-input" type="text" />
         <PrimaryBtn link="/animals" />
       </form>
