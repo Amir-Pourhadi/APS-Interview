@@ -12,7 +12,7 @@ const App = () => {
 
   const updateUser = (newData) => {
     setUser(({ name, animals }) => ({ name, animals, ...newData }));
-    console.log(user)
+    console.log(user);
   };
 
   return (
@@ -20,15 +20,9 @@ const App = () => {
       <GlobalStyle />
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route
-          path="/name"
-          render={(props) => <Name {...props} updateUser={updateUser} user={user} />}
-        />
-        <Route
-          path="/animals"
-          render={(props) => <Animals {...props} updateUser={updateUser} user={user} />}
-        />
-        <Route path="/sort-list" component={SortList} />
+        <Route path="/name" render={(props) => <Name {...props} updateUser={updateUser} user={user} />} />
+        <Route path="/animals" render={(props) => <Animals {...props} updateUser={updateUser} user={user} />} />
+        <Route path="/sort-list" render={(props) => <SortList {...props} user={user} />} />
       </Switch>
     </div>
   );
