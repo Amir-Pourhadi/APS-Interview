@@ -1,8 +1,8 @@
 import { useRef } from "react";
 import PrimaryBtn from "../assets/PrimaryBtn";
 
-const Name = ({ updateUser, userName }) => {
-  const inputEl = useRef(userName);
+const Name = ({ updateUser, user:{name,animals} }) => {
+  const inputEl = useRef(name);
 
   const handleNameChange = (e) => {
     e.preventDefault();
@@ -12,10 +12,10 @@ const Name = ({ updateUser, userName }) => {
   return (
     <div>
       <h1>
-        Hello, <span>{userName ? userName : "Enter your name below:"}</span>
+        Hello, <span>{name ? name : "Enter your name below:"}</span>
       </h1>
       <label htmlFor="name-input">My name is: </label>
-      <input id="name-input" type="text" ref={inputEl} value={userName} onChange={handleNameChange} />
+      <input id="name-input" type="text" ref={inputEl} value={name} onChange={handleNameChange} />
       <PrimaryBtn link="/animals" />
     </div>
   );
