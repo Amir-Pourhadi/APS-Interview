@@ -1,3 +1,4 @@
+import "bootstrap/dist/css/bootstrap.min.css";
 import { Route, Switch } from "react-router";
 import { GlobalStyle } from "./GlobalStyle";
 import SortList from "./SortList";
