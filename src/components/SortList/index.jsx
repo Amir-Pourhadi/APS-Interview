@@ -1,12 +1,10 @@
-import { inRange, range } from "lodash";
+import { inRange } from "lodash";
 import { useCallback, useState } from "react";
 import Draggable from "./Draggable";
 import { Container, Rect } from "./view";
 
-const MAX = 5;
-
-const SortList = () => {
-  const items = range(MAX);
+const SortList = ({ user: { name, animals } }) => {
+  const items = [name, ...animals];
   const [state, setState] = useState({
     order: items,
     dragOrder: items,
@@ -19,27 +17,15 @@ const SortList = () => {
       const index = state.order.indexOf(id);
       const dragOrder = state.order.filter((index) => index !== id);
 
-      if (!inRange(index + delta, 0, items.length)) {
-        return;
-      }
-
+      if (!inRange(index + delta, 0, items.length)) return;
       dragOrder.splice(index + delta, 0, id);
-
-      setState((state) => ({
-        ...state,
-        draggedIndex: id,
-        dragOrder,
-      }));
+      setState((state) => ({ ...state, draggedIndex: id, dragOrder }));
     },
     [state.order, items.length]
   );
 
   const handleDragEnd = useCallback(() => {
-    setState((state) => ({
-      ...state,
-      order: state.dragOrder,
-      draggedIndex: null,
-    }));
+    setState((state) => ({ ...state, order: state.dragOrder, draggedIndex: null }));
   }, []);
 
   return (

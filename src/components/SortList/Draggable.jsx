@@ -3,40 +3,23 @@ import React, { useCallback, useEffect, useMemo, useState } from "react";
 const POSITION = { x: 0, y: 0 };
 
 const Draggable = ({ children, id, onDrag, onDragEnd }) => {
-  const [state, setState] = useState({
-    isDragging: false,
-    origin: POSITION,
-    translation: POSITION,
-  });
+  const [state, setState] = useState({ isDragging: false, origin: POSITION, translation: POSITION });
 
   const handleMouseDown = useCallback(({ clientX, clientY }) => {
-    setState((state) => ({
-      ...state,
-      isDragging: true,
-      origin: { x: clientX, y: clientY },
-    }));
+    setState((state) => ({ ...state, isDragging: true, origin: { x: clientX, y: clientY } }));
   }, []);
 
   const handleMouseMove = useCallback(
     ({ clientX, clientY }) => {
       const translation = { x: clientX - state.origin.x, y: clientY - state.origin.y };
-
-      setState((state) => ({
-        ...state,
-        translation,
-      }));
-
+      setState((state) => ({ ...state, translation }));
       onDrag({ translation, id });
     },
     [state.origin, onDrag, id]
   );
 
   const handleMouseUp = useCallback(() => {
-    setState((state) => ({
-      ...state,
-      isDragging: false,
-    }));
-
+    setState((state) => ({ ...state, isDragging: false }));
     onDragEnd();
   }, [onDragEnd]);
 
