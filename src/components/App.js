@@ -2,6 +2,7 @@ import { inRange, range } from "lodash";
 import React, { useCallback, useState } from "react";
 import styled from "styled-components";
 import Draggable from "./Draggable";
+import { GlobalStyle } from "./GlobalStyle";
 
 const MAX = 5;
 const HEIGHT = 80;
@@ -10,7 +11,7 @@ const App = () => {
   const items = range(MAX);
   const [state, setState] = useState({
     order: items,
-    dragOrder: items, // items order while dragging
+    dragOrder: items,
     draggedIndex: null,
   });
 
@@ -45,6 +46,7 @@ const App = () => {
 
   return (
     <Container>
+      <GlobalStyle />
       {items.map((index) => {
         const isDragging = state.draggedIndex === index;
         const top = state.dragOrder.indexOf(index) * (HEIGHT + 10);
