@@ -1,6 +1,6 @@
 import { inRange, range } from "lodash";
 import { useCallback, useState } from "react";
-import Draggable from "../Draggable";
+import Draggable from "./Draggable";
 import { Container, Rect } from "./view";
 
 const MAX = 5;
