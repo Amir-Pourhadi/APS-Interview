@@ -11,7 +11,8 @@ const App = () => {
   const [user, setUser] = useState({ name: "", animals: [] });
 
   const updateUser = (newData) => {
-    setUser({ name: "", animals: [], ...newData });
+    setUser(({ name, animals }) => ({ name, animals, ...newData }));
+    console.log(user)
   };
 
   return (
@@ -21,11 +22,11 @@ const App = () => {
         <Route exact path="/" component={Home} />
         <Route
           path="/name"
-          render={(props) => <Name {...props} updateUser={updateUser} userName={user.name} />}
+          render={(props) => <Name {...props} updateUser={updateUser} user={user} />}
         />
         <Route
           path="/animals"
-          render={(props) => <Animals {...props} userName={user.name} />}
+          render={(props) => <Animals {...props} updateUser={updateUser} user={user} />}
         />
         <Route path="/sort-list" component={SortList} />
       </Switch>
