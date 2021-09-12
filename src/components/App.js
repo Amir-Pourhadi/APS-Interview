@@ -2,6 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Route, Switch } from "react-router";
 import { GlobalStyle } from "./GlobalStyle";
 import Home from "./Home";
+import Name from "./Name";
 import SortList from "./SortList";
 
 const App = () => (
@@ -9,6 +10,7 @@ const App = () => (
     <GlobalStyle />
     <Switch>
       <Route exact path="/" component={Home} />
+      <Route path="/name" component={Name} />
       <Route path="/sort-list" component={SortList} />
     </Switch>
   </div>
