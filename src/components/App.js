@@ -12,7 +12,6 @@ const App = () => {
 
   const updateUser = (newData) => {
     setUser(({ name, animals }) => ({ name, animals, ...newData }));
-    console.log(user);
   };
 
   return (
