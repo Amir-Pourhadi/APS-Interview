@@ -14,7 +14,7 @@ const Footer = () => {
         <Text>
           View Source Code on &nbsp;
           <Link href="https://github.com/Amir-Pourhadi/APS-Interview" target="/">
-            GitHab
+            GitHub
             <GitHubIcon />
           </Link>
         </Text>
