@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import PrimaryBtn from "../assets/PrimaryBtn";
+import Input from "./Input";
 
 const Animals = ({ user: { name, animals }, updateUser }) => {
   const inputEl = useRef("");
@@ -20,6 +21,8 @@ const Animals = ({ user: { name, animals }, updateUser }) => {
         <input id="animal-input" type="text" ref={inputEl} />
         <input type="submit" className="btn btn-success" />
       </form>
+      {animals &&
+        animals.map((animal, index) => <Input content={animal} count={index} animals={animals} key={index} />)}
       <PrimaryBtn link="sort-list" />
     </div>
   );
