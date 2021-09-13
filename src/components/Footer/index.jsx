@@ -4,11 +4,17 @@ const Footer = () => {
   return (
     <footer>
       <Detail className="d-flex justify-content-around align-items-center" height={40}>
-        <Text>&copy; Copyright 2021, APSignals Inc. Amir Pourhadi, All Rights Reserved.</Text>
+        <Text>
+          Developed by
+          <Link href="https://www.linkedin.com/in/amirpourhadi" target="/">
+            &nbsp;Amir Pourhadi&nbsp;
+          </Link>
+          with Respect and Honor
+        </Text>
         <Text>
           View Source Code on &nbsp;
-          <Link href="#" target="/">
-            GitLab
+          <Link href="https://github.com/Amir-Pourhadi/APS-Interview" target="/">
+            GitHab
             <GitHubIcon />
           </Link>
         </Text>
