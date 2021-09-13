@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-export const Container = styled.div({
+export const Main = styled.main({
   width: "100vw",
-  minHeight: "100vh",
+  height: "calc(100vh - 40px - 75px)",
 });
 
 export const Rect = styled.div.attrs(({ isDragging }) => ({

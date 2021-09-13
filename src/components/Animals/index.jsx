@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import PrimaryBtn from "../assets/PrimaryBtn";
 import Input from "./Input";
+import { Main } from "./view";
 
 const Animals = ({ user: { name, animals }, updateUser }) => {
   const inputEl = useRef("");
@@ -12,7 +13,7 @@ const Animals = ({ user: { name, animals }, updateUser }) => {
   };
 
   return (
-    <div>
+    <Main>
       <p>
         <span>Well Done {name} !</span> Enter name of 3 animals separated by comma
       </p>
@@ -24,7 +25,7 @@ const Animals = ({ user: { name, animals }, updateUser }) => {
       {animals &&
         animals.map((animal, index) => <Input content={animal} count={index} animals={animals} key={index} />)}
       <PrimaryBtn link="sort-list" />
-    </div>
+    </Main>
   );
 };
 

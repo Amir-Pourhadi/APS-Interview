@@ -1,7 +1,7 @@
 import { inRange } from "lodash";
 import { useCallback, useState } from "react";
 import Draggable from "./Draggable";
-import { Container, Rect } from "./view";
+import { Main, Rect } from "./view";
 
 const SortList = ({ user: { name, animals } }) => {
   const items = [name, ...animals];
@@ -29,7 +29,7 @@ const SortList = ({ user: { name, animals } }) => {
   }, []);
 
   return (
-    <Container>
+    <Main>
       {items.map((index) => {
         const isDragging = state.draggedIndex === index;
         const top = state.dragOrder.indexOf(index) * 90;
@@ -43,7 +43,7 @@ const SortList = ({ user: { name, animals } }) => {
           </Draggable>
         );
       })}
-    </Container>
+    </Main>
   );
 };
 
