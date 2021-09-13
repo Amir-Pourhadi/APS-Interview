@@ -15,11 +15,11 @@ const Name = ({ updateUser, user: { name, animals } }) => {
       <h1 className="py-5">
         Hello, <span>{name ? `${name}!` : "Please Enter your name below:"}</span>
       </h1>
-      <div class="input-group flex-nowrap w-25 mx-auto my-5">
-        <span class="input-group-text">@</span>
+      <div className="input-group flex-nowrap w-25 mx-auto my-5">
+        <span className="input-group-text">@</span>
         <input
           type="text"
-          class="form-control"
+          className="form-control"
           placeholder="Your Name Here"
           ref={inputEl}
           value={name}
