@@ -15,10 +15,8 @@ const Name = ({ updateUser, user: { name, animals } }) => {
       <h1 className="py-5">
         Hello, <span>{name ? `${name}!` : "Please Enter your name below:"}</span>
       </h1>
-      <div class="input-group flex-nowrap w-25">
-        <span class="input-group-text">
-          @
-        </span>
+      <div class="input-group flex-nowrap w-25 mx-auto my-5">
+        <span class="input-group-text">@</span>
         <input
           type="text"
           class="form-control"
@@ -28,7 +26,7 @@ const Name = ({ updateUser, user: { name, animals } }) => {
           onChange={handleNameChange}
         />
       </div>
-      <PrimaryBtn link="/animals" />
+      {name && <PrimaryBtn link="/animals" />}
     </Main>
   );
 };
