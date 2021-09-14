@@ -4,7 +4,7 @@ import Draggable from "./Draggable";
 import { Heading, Main, Rect } from "./view";
 
 const SortList = ({ user: { name, animals } }) => {
-  const items = [name, ...animals];
+  const items = animals;
   const [state, setState] = useState({
     order: items,
     dragOrder: items,
