@@ -1,15 +1,18 @@
 import { useRef, useState } from "react";
-import Inputs from "./Inputs";
-import { Heading, Main } from "./view";
+import { useHistory } from "react-router";
+import { AngleRight, Heading, Main, Text } from "../GlobalStyleComponents";
+import Input from "./Input";
 
 const Animals = ({ user: { name, animals }, updateUser }) => {
   const inputEl = useRef("");
   const [valid, setValid] = useState(true);
+  const [done, setDone] = useState(false);
+  const history = useHistory();
 
   const handleUpdateUser = (e) => {
     e.preventDefault();
     const inputValue = inputEl.current.value;
-    const commas = (inputValue.match(/,/g) || 0).length;
+    const commas = (inputValue.match(/,/g) || []).length;
     if (!inputValue || commas !== 2) {
       setValid(false);
       return;
@@ -22,7 +25,37 @@ const Animals = ({ user: { name, animals }, updateUser }) => {
   return (
     <Main className="text-center">
       {animals.length ? (
-        <Inputs name={name} animals={animals} />
+        <>
+          {done ? (
+            <>
+              <Heading>
+                Great {name}! <br /> Please explain what do you know about one of the animals in one sentence.
+              </Heading>
+              <form
+                onSubmit={() => {
+                  history.push("/sort-list");
+                }}>
+                <div className="input-group input-group-lg mb-3 w-50 me-auto ms-auto">
+                  <input type="text" className="form-control" placeholder="A Simple Sentence" />
+                  <input className="btn btn-outline-success" type="submit" />
+                </div>
+              </form>
+            </>
+          ) : (
+            <>
+              <Heading>Nice Job {name}! Please swap first and last letter of each animal.</Heading>
+              <div>
+                {animals.map((animal, index) => (
+                  <Input content={animal} count={index} animals={animals} key={index} />
+                ))}
+                <button className="btn btn-primary" onClick={() => setDone(true)}>
+                  <Text>Continue</Text>
+                  <AngleRight />
+                </button>
+              </div>
+            </>
+          )}
+        </>
       ) : (
         <div>
           <Heading>
