@@ -6,13 +6,13 @@ export const Detail = styled.div({
   backgroundColor: "#161E2CCC",
 });
 
-export const Text = styled.p({
+export const Text = styled.p(({ isMobile }) => ({
   display: "flex",
   alignItems: "center",
-  fontSize: 22,
+  fontSize: isMobile ? "4vw" : 22,
   color: "white",
   margin: 0,
-});
+}));
 
 export const Link = styled.a({
   "&:hover": {

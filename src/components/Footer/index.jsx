@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer>
       <Detail className="d-flex justify-content-around align-items-center" height={40}>
-        <Text>
+        <Text isMobile={isMobile}>
           Developed by
           <Link href="https://www.linkedin.com/in/amirpourhadi" target="/">
             &nbsp;Amir Pourhadi&nbsp;
