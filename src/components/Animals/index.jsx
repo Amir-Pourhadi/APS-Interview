@@ -13,7 +13,7 @@ const Animals = ({ user: { name, animals }, updateUser }) => {
     e.preventDefault();
     const inputValue = inputEl.current.value;
     const commas = (inputValue.match(/,/g) || []).length;
-    if (!inputValue || commas !== 2) {
+    if (!inputValue || commas !== 3) {
       setValid(false);
       return;
     }
@@ -59,7 +59,7 @@ const Animals = ({ user: { name, animals }, updateUser }) => {
       ) : (
         <div>
           <Heading>
-            <span>Well Done {name}!</span> <br /> Please Enter name of 3 animals separated by comma
+            <span>Well Done {name}!</span> <br /> Please Enter name of 4 animals separated by comma
           </Heading>
           <form onSubmit={handleUpdateUser}>
             <div className="input-group input-group-lg mb-3 w-50 me-auto ms-auto">
