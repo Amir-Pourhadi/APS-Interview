@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import PrimaryBtn from "../assets/PrimaryBtn";
-import { Main } from "./view";
+import { Heading, Main } from "./view";
 
 const Name = ({ updateUser, user: { name, animals } }) => {
   const inputEl = useRef(name);
@@ -12,9 +12,9 @@ const Name = ({ updateUser, user: { name, animals } }) => {
 
   return (
     <Main className="text-center">
-      <h1 className="py-5">
+      <Heading>
         Hello, <span>{name ? `${name}!` : "Please Enter your name below:"}</span>
-      </h1>
+      </Heading>
       <div className="input-group input-group-lg flex-nowrap w-25 mx-auto my-5">
         <span className="input-group-text">@</span>
         <input
