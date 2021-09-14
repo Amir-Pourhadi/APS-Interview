@@ -11,7 +11,7 @@ const Header = () => (
         <div className="ms-3 fs-3 fw-bold text-black">APSignals</div>
       </div>
     </Link>
-    <div className="fs-4">Learn Coding for Free is not a Dream anymore!</div>
+    <div className="fs-4">Learn Coding for Free is not a Dream Anymore!</div>
     <a className="btn btn-secondary fs-5" href="https://www.instagram.com/apsignal" target="/">
       Our Instagram
       <FaInstagram className="ms-3 fs-3" />
