@@ -9,10 +9,10 @@ const Input = ({ content, count }) => {
   };
 
   return (
-    <>
-      <label htmlFor={`animal${count}`}>{`animal ${count}`}</label>
-      <input id={`animal${count}`} type="text" value={input} ref={inputEl} onChange={handleChange} />
-    </>
+    <div class="input-group input-group-lg w-50 me-auto ms-auto py-3">
+      <span class="input-group-text">{`Animal #${count + 1}`}</span>
+      <input type="text" class="form-control" value={input} ref={inputEl} onChange={handleChange} />
+    </div>
   );
 };
 
