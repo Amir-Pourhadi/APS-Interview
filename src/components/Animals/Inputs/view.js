@@ -9,5 +9,5 @@ export const AngleRight = styled(FaAngleRight)({
 });
 
 export const Heading = styled.h1({
-  padding: "10% 0 20px",
+  padding: "10% 0 30px",
 });

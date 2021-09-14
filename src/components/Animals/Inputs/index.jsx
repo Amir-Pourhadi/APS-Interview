@@ -12,7 +12,7 @@ const Inputs = ({ name, animals }) => {
       {done ? (
         <>
           <Heading>
-            Great {name}! Please explain what do you know about one of the animals in one sentence.
+            Great {name}! <br /> Please explain what do you know about one of the animals in one sentence.
           </Heading>
           <form
             onSubmit={() => {

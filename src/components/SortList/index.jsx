@@ -1,7 +1,7 @@
 import { inRange } from "lodash";
 import { useCallback, useState } from "react";
 import Draggable from "./Draggable";
-import { Main, Rect } from "./view";
+import { Heading, Main, Rect } from "./view";
 
 const SortList = ({ user: { name, animals } }) => {
   const items = [name, ...animals];
@@ -31,10 +31,10 @@ const SortList = ({ user: { name, animals } }) => {
   return (
     <Main>
       <div className="position-absolute w-50 px-5">
-        <h1 className="py-5">
+        <Heading>
           You are Fascinating!
           <br /> Only two more steps ...
-        </h1>
+        </Heading>
         <p className="fs-3">1) Please sort these by length of them.</p>
         <p className="fs-3">2) Please change the place of first and last box.</p>
       </div>

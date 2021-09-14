@@ -22,3 +22,7 @@ export const Rect = styled.div.attrs(({ isDragging }) => ({
   fontSize: 25,
   color: "#777",
 });
+
+export const Heading = styled.h1({
+  padding: "10% 0 20px",
+});
