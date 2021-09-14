@@ -22,8 +22,8 @@ const Animals = ({ user: { name, animals }, updateUser }) => {
           </h1>
           <form onSubmit={handleUpdateUser}>
             <div className="input-group input-group-lg mb-3 w-50 me-auto ms-auto">
-              <input className="btn btn-outline-success" type="submit" />
               <input type="text" className="form-control" placeholder="Name of 3 Animals" ref={inputEl} />
+              <input className="btn btn-outline-success" type="submit" />
             </div>
           </form>
         </div>
