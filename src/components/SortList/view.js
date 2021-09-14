@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Main = styled.main({
   width: "100vw",
-  height: "calc(100vh - 40px - 75px)",
+  height: "calc(100vh - 100px)",
 });
 
 export const Rect = styled.div.attrs(({ isDragging }) => ({
@@ -18,7 +18,7 @@ export const Rect = styled.div.attrs(({ isDragging }) => ({
   justifyContent: "center",
   position: "absolute",
   top: ({ top }) => 100 + top + "px",
-  left: "calc(50vw - 150px)",
-  fontSize: 20,
+  left: "calc(60vw)",
+  fontSize: 25,
   color: "#777",
 });

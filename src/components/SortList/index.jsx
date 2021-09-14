@@ -30,6 +30,14 @@ const SortList = ({ user: { name, animals } }) => {
 
   return (
     <Main>
+      <div className="position-absolute w-50 px-5">
+        <h1 className="py-5">
+          You are Fascinating!
+          <br /> Only two more steps ...
+        </h1>
+        <p className="fs-3">1) Please sort these by length of them.</p>
+        <p className="fs-3">2) Please change the place of first and last box.</p>
+      </div>
       {items.map((index) => {
         const isDragging = state.draggedIndex === index;
         const top = state.dragOrder.indexOf(index) * 90;

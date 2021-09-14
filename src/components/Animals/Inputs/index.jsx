@@ -17,7 +17,7 @@ const Inputs = ({ name, animals }) => {
               history.push("/sort-list");
             }}>
             <div className="input-group input-group-lg mb-3 w-50 me-auto ms-auto">
-              <input type="text" className="form-control" placeholder="A Sentence about an Animal" />
+              <input type="text" className="form-control" placeholder="A Simple Sentence" />
               <input className="btn btn-outline-success" type="submit" />
             </div>
           </form>
