@@ -11,7 +11,9 @@ const Inputs = ({ name, animals }) => {
     <>
       {done ? (
         <>
-          <h1 className="py-5">Great {name}! Please Explain about one of animals in one sentence.</h1>
+          <h1 className="py-5">
+            Great {name}! Please explain what do you know about one of the animals in one sentence.
+          </h1>
           <form
             onSubmit={() => {
               history.push("/sort-list");
