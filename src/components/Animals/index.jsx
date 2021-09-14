@@ -9,7 +9,7 @@ const Animals = ({ user: { name, animals }, updateUser }) => {
   const handleUpdateUser = (e) => {
     e.preventDefault();
     const inputValue = inputEl.current.value;
-    const commas = inputValue.match(/,/g).length;
+    const commas = (inputValue.match(/,/g) || 0).length;
     if (!inputValue || commas !== 2) {
       setValid(false);
       return;
