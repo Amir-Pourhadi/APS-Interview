@@ -5,5 +5,5 @@ export const Main = styled.main({
 });
 
 export const Heading = styled.h1({
-  padding: '10% 0 20px',
+  padding: '8% 0 20px',
 });
