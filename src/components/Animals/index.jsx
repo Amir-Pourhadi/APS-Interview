@@ -1,6 +1,5 @@
 import { useRef } from "react";
-import PrimaryBtn from "../assets/PrimaryBtn";
-import Input from "./Input";
+import Inputs from "./Inputs";
 import { Main } from "./view";
 
 const Animals = ({ user: { name, animals }, updateUser }) => {
@@ -13,18 +12,22 @@ const Animals = ({ user: { name, animals }, updateUser }) => {
   };
 
   return (
-    <Main>
-      <p>
-        <span>Well Done {name} !</span> Enter name of 3 animals separated by comma
-      </p>
-      <form onSubmit={handleUpdateUser}>
-        <label htmlFor="animal-input">My Animals: </label>
-        <input id="animal-input" type="text" ref={inputEl} />
-        <input type="submit" className="btn btn-success" />
-      </form>
-      {animals &&
-        animals.map((animal, index) => <Input content={animal} count={index} animals={animals} key={index} />)}
-      <PrimaryBtn link="sort-list" />
+    <Main className="text-center">
+      {animals.length ? (
+        <Inputs name={name} animals={animals} />
+      ) : (
+        <div>
+          <h1 className="py-5">
+            <span>Well Done {name}!</span> Please Enter name of 3 animals separated by comma
+          </h1>
+          <form onSubmit={handleUpdateUser}>
+            <div className="input-group input-group-lg mb-3 w-50 me-auto ms-auto">
+              <input className="btn btn-outline-success" type="submit" />
+              <input type="text" className="form-control" placeholder="Name of 3 Animals" ref={inputEl} />
+            </div>
+          </form>
+        </div>
+      )}
     </Main>
   );
 };
