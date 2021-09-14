@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { BsPersonFill } from "react-icons/bs";
 import PrimaryBtn from "../assets/PrimaryBtn";
 import { Heading, Main } from "./view";
 
@@ -16,7 +17,9 @@ const Name = ({ updateUser, user: { name, animals } }) => {
         Hello, <span>{name ? `${name}!` : "Please Enter your name below:"}</span>
       </Heading>
       <div className="input-group input-group-lg flex-nowrap w-25 mx-auto my-5">
-        <span className="input-group-text">@</span>
+        <span className="input-group-text">
+          <BsPersonFill fontSize="27" />
+        </span>
         <input
           type="text"
           className="form-control"
