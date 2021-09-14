@@ -7,3 +7,7 @@ export const AngleRight = styled(FaAngleRight)({
   fontSize: 25,
   marginLeft: 12,
 });
+
+export const Heading = styled.h1({
+  padding: "10% 0 20px",
+});

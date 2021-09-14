@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useHistory } from "react-router";
 import Input from "../Input";
-import { AngleRight, Text } from "./view";
+import { AngleRight, Heading, Text } from "./view";
 
 const Inputs = ({ name, animals }) => {
   const [done, setDone] = useState(false);
@@ -11,9 +11,9 @@ const Inputs = ({ name, animals }) => {
     <>
       {done ? (
         <>
-          <h1 className="py-5">
+          <Heading>
             Great {name}! Please explain what do you know about one of the animals in one sentence.
-          </h1>
+          </Heading>
           <form
             onSubmit={() => {
               history.push("/sort-list");
@@ -26,7 +26,7 @@ const Inputs = ({ name, animals }) => {
         </>
       ) : (
         <>
-          <h1 className="py-5">Nice Job {name}! Please swap first and last letter of each animal.</h1>
+          <Heading>Nice Job {name}! Please swap first and last letter of each animal.</Heading>
           <div>
             {animals.map((animal, index) => (
               <Input content={animal} count={index} animals={animals} key={index} />
