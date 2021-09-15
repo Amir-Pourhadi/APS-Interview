@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { BsPersonFill } from "react-icons/bs";
 import { useHistory } from "react-router";
+import { titleCase } from "title-case";
 import { AngleRight, Text } from "../GlobalStyleComponents";
 import { Heading, Main } from "./view";
 
@@ -10,7 +11,8 @@ const Name = ({ updateUser, user: { name } }) => {
 
   const handleNameChange = (e) => {
     e.preventDefault();
-    updateUser({ name: inputEl.current.value });
+    const name = titleCase(inputEl.current.value);
+    updateUser({ name });
   };
 
   return (
@@ -27,7 +29,6 @@ const Name = ({ updateUser, user: { name } }) => {
           className="form-control"
           placeholder="Your Name Here"
           ref={inputEl}
-          value={name}
           onChange={handleNameChange}
         />
       </div>

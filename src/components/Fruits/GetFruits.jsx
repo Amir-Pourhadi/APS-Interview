@@ -14,7 +14,7 @@ const GetAnimals = ({ name, updateUser }) => {
       return;
     }
 
-    const fruits = inputValue.split(",").map((fruit) => fruit.trim());
+    const fruits = inputValue.split(",").map((fruit) => fruit.trim().toLowerCase());
     updateUser({ fruits });
   };
 
