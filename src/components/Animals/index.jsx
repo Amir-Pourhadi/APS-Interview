@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
-import { AngleRight, Heading, Main, Text } from "../GlobalStyleComponents";
+import { Heading, Main } from "../GlobalStyleComponents";
 import Explain from "./Explain";
-import Input from "./Input";
+import Swap from "./Swap";
 
 const Animals = ({ user: { name, animals }, updateUser }) => {
   const inputEl = useRef("");
@@ -24,24 +24,7 @@ const Animals = ({ user: { name, animals }, updateUser }) => {
   return (
     <Main className="text-center">
       {animals.length ? (
-        <>
-          {done ? (
-            <Explain name={name} />
-          ) : (
-            <>
-              <Heading>Nice Job {name}! Please swap first and last letter of each animal.</Heading>
-              <div>
-                {animals.map((animal, index) => (
-                  <Input content={animal} count={index} animals={animals} key={index} />
-                ))}
-                <button className="btn btn-primary" onClick={() => setDone(true)}>
-                  <Text>Continue</Text>
-                  <AngleRight />
-                </button>
-              </div>
-            </>
-          )}
-        </>
+        <>{done ? <Explain name={name} /> : <Swap name={name} animals={animals} setDone={setDone} />}</>
       ) : (
         <div>
           <Heading>
