@@ -1,13 +1,12 @@
 import { useRef, useState } from "react";
-import { useHistory } from "react-router";
 import { AngleRight, Heading, Main, Text } from "../GlobalStyleComponents";
+import Explain from "./Explain";
 import Input from "./Input";
 
 const Animals = ({ user: { name, animals }, updateUser }) => {
   const inputEl = useRef("");
   const [valid, setValid] = useState(true);
   const [done, setDone] = useState(false);
-  const history = useHistory();
 
   const handleUpdateUser = (e) => {
     e.preventDefault();
@@ -27,20 +26,7 @@ const Animals = ({ user: { name, animals }, updateUser }) => {
       {animals.length ? (
         <>
           {done ? (
-            <>
-              <Heading>
-                Great {name}! <br /> Please explain what do you know about one of the animals in one sentence.
-              </Heading>
-              <form
-                onSubmit={() => {
-                  history.push("/sort-list");
-                }}>
-                <div className="input-group input-group-lg mb-3 w-50 me-auto ms-auto">
-                  <input type="text" className="form-control" placeholder="A Simple Sentence" />
-                  <input className="btn btn-outline-success" type="submit" />
-                </div>
-              </form>
-            </>
+            <Explain name={name} />
           ) : (
             <>
               <Heading>Nice Job {name}! Please swap first and last letter of each animal.</Heading>
