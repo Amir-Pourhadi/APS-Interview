@@ -63,11 +63,11 @@ const Animals = ({ user: { name, animals }, updateUser }) => {
           </Heading>
           <form onSubmit={handleUpdateUser}>
             <div className="input-group input-group-lg mb-3 w-50 me-auto ms-auto">
-              <input type="text" className="form-control" placeholder="Name of 3 Animals" ref={inputEl} />
+              <input type="text" className="form-control" placeholder="Name of 4 Animals" ref={inputEl} />
               <input className="btn btn-outline-success" type="submit" />
             </div>
             {!valid && (
-              <div className="text-danger fs-4">Animals should be only 3 and separated by comma ( , )</div>
+              <div className="text-danger fs-4">Animals should be only 4 and separated by comma ( , )</div>
             )}
           </form>
         </div>
