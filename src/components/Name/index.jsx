@@ -1,10 +1,12 @@
 import { useRef } from "react";
 import { BsPersonFill } from "react-icons/bs";
-import PrimaryBtn from "../assets/PrimaryBtn";
+import { useHistory } from "react-router";
+import { AngleRight, Text } from "../GlobalStyleComponents";
 import { Heading, Main } from "./view";
 
 const Name = ({ updateUser, user: { name, animals } }) => {
   const inputEl = useRef(name);
+  const history = useHistory();
 
   const handleNameChange = (e) => {
     e.preventDefault();
@@ -29,7 +31,10 @@ const Name = ({ updateUser, user: { name, animals } }) => {
           onChange={handleNameChange}
         />
       </div>
-      {name && <PrimaryBtn link="/animals" />}
+      <button className="btn btn-primary" disabled={!name} onClick={() => history.push("/animals")}>
+        <Text>Continue</Text>
+        <AngleRight />
+      </button>
     </Main>
   );
 };
