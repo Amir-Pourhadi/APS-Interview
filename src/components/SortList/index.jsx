@@ -3,8 +3,8 @@ import { useCallback, useState } from "react";
 import Draggable from "./Draggable";
 import { Heading, Main, Rect } from "./view";
 
-const SortList = ({ user: { name, animals } }) => {
-  const items = animals;
+const SortList = ({ user: { fruits } }) => {
+  const items = fruits;
   const [state, setState] = useState({
     order: items,
     dragOrder: items,
@@ -33,10 +33,9 @@ const SortList = ({ user: { name, animals } }) => {
       <div className="position-absolute w-50 px-5">
         <Heading>
           You are Fascinating!
-          <br /> Only two more steps ...
+          <br /> Only one more step ...
         </Heading>
-        <p className="fs-3">1) Please sort these by length of them.</p>
-        <p className="fs-3">2) Please change the place of first and last box.</p>
+        <p className="fs-3">Please swap second and last box.</p>
       </div>
       {items.map((index) => {
         const isDragging = state.draggedIndex === index;

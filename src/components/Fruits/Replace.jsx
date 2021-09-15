@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { AngleRight, Heading, Text } from "../GlobalStyleComponents";
 import Input from "./Input";
 
-const Swap = ({ name, animals, setDone }) => {
+const Swap = ({ name, fruits, setDone }) => {
   const [seconds, setSeconds] = useState(13);
 
   useEffect(() => {
@@ -17,10 +17,13 @@ const Swap = ({ name, animals, setDone }) => {
 
   return (
     <>
-      <Heading>Nice Job {name}! Please swap first and last letter of each animal.</Heading>
+      <Heading>
+        Nice Job {name}! For each fruit, please replace the first letter with the third one (third
+        letter)
+      </Heading>
       <div>
-        {animals.map((animal, index) => (
-          <Input content={animal} count={index} animals={animals} key={index} />
+        {fruits.map((fruit, index) => (
+          <Input content={fruit} count={index} key={index} />
         ))}
         <button className="btn btn-primary" disabled={seconds} onClick={() => setDone(true)}>
           <Text>{seconds ? `Wait ${seconds} Seconds` : "Continue"}</Text>

@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useState } from "react";
 import { Redirect, Route, Switch } from "react-router";
-import Animals from "./Animals";
+import Fruits from "./Fruits";
 import Footer from "./Footer";
 import { GlobalStyle } from "./GlobalStyle";
 import Header from "./Header";
@@ -11,10 +11,10 @@ import Name from "./Name";
 import SortList from "./SortList";
 
 const App = () => {
-  const [user, setUser] = useState({ name: "", animals: [] });
+  const [user, setUser] = useState({ name: "", fruits: [] });
 
   const updateUser = (newData) => {
-    setUser(({ name, animals }) => ({ name, animals, ...newData }));
+    setUser(({ name, fruits }) => ({ name, fruits, ...newData }));
   };
 
   return (
@@ -25,7 +25,7 @@ const App = () => {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/name" render={(props) => <Name {...props} updateUser={updateUser} user={user} />} />
-        <Route path="/animals" render={(props) => <Animals {...props} updateUser={updateUser} user={user} />} />
+        <Route path="/fruits" render={(props) => <Fruits {...props} updateUser={updateUser} user={user} />} />
         <Route path="/sort-list" render={(props) => <SortList {...props} user={user} />} />
         <Route path="/mobile" component={Mobile} />
       </Switch>

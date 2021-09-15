@@ -4,7 +4,7 @@ import { useHistory } from "react-router";
 import { AngleRight, Text } from "../GlobalStyleComponents";
 import { Heading, Main } from "./view";
 
-const Name = ({ updateUser, user: { name, animals } }) => {
+const Name = ({ updateUser, user: { name } }) => {
   const inputEl = useRef(name);
   const history = useHistory();
 
@@ -31,7 +31,7 @@ const Name = ({ updateUser, user: { name, animals } }) => {
           onChange={handleNameChange}
         />
       </div>
-      <button className="btn btn-primary" disabled={!name} onClick={() => history.push("/animals")}>
+      <button className="btn btn-primary" disabled={!name} onClick={() => history.push("/fruits")}>
         <Text>Continue</Text>
         <AngleRight />
       </button>
