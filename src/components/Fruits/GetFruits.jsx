@@ -21,15 +21,22 @@ const GetAnimals = ({ name, updateUser }) => {
   return (
     <>
       <Heading>
-        <span>Well Done {name}!</span> <br /> Please Enter name of 4 fruits separated by comma
+        <span>Well Done {name}!</span> Please name four of your favorite fruits separated by comma
       </Heading>
       <form onSubmit={handleUpdateUser}>
         <div className="input-group input-group-lg mb-3 w-50 me-auto ms-auto">
-          <input type="text" className="form-control" placeholder="Name of 4 Fruits" ref={inputEl} />
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Name of 4 Fruits"
+            ref={inputEl}
+          />
           <input className="btn btn-outline-success" type="submit" />
         </div>
         {!valid && (
-          <div className="text-danger fs-4">Fruits should be only 4 and separated by comma ( , )</div>
+          <div className="text-danger fs-4">
+            Fruits should be only 4 and separated by comma ( , )
+          </div>
         )}
       </form>
     </>
