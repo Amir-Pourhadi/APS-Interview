@@ -6,7 +6,9 @@ export const Main = styled.main({
 });
 
 export const Heading = styled.h1({
+  width: "70%",
   padding: "8% 0 30px",
+  margin: "0 auto",
 });
 
 export const Text = styled.span({ fontSize: 20 });
