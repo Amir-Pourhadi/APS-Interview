@@ -11,7 +11,7 @@ const Name = ({ updateUser, user: { name } }) => {
 
   const handleNameChange = (e) => {
     e.preventDefault();
-    const name = titleCase(inputEl.current.value);
+    const name = titleCase(inputEl.current.value.trim());
     updateUser({ name });
   };
 
