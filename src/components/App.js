@@ -1,13 +1,13 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useState } from "react";
 import { Redirect, Route, Switch } from "react-router";
-import Fruits from "./Fruits";
 import Footer from "./Footer";
+import Fruits from "./Fruits";
 import { GlobalStyle } from "./GlobalStyle";
 import Header from "./Header";
-import Home from "./Home";
 import Mobile from "./Mobile";
 import Name from "./Name";
+import { Home } from "./routes";
 import SortList from "./SortList";
 
 const App = () => {
@@ -24,8 +24,14 @@ const App = () => {
       <Header />
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/name" render={(props) => <Name {...props} updateUser={updateUser} user={user} />} />
-        <Route path="/fruits" render={(props) => <Fruits {...props} updateUser={updateUser} user={user} />} />
+        <Route
+          path="/name"
+          render={(props) => <Name {...props} updateUser={updateUser} user={user} />}
+        />
+        <Route
+          path="/fruits"
+          render={(props) => <Fruits {...props} updateUser={updateUser} user={user} />}
+        />
         <Route path="/sort-list" render={(props) => <SortList {...props} user={user} />} />
         <Route path="/mobile" component={Mobile} />
       </Switch>
