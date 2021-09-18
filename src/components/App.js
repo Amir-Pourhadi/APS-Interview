@@ -6,8 +6,7 @@ import Fruits from "./Fruits";
 import { GlobalStyle } from "./GlobalStyle";
 import Header from "./Header";
 import Mobile from "./Mobile";
-import Name from "./Name";
-import { Home } from "./routes";
+import { Home, Name } from "./routes";
 import SortList from "./SortList";
 
 const App = () => {
@@ -19,8 +18,8 @@ const App = () => {
 
   return (
     <div className="container-fluid p-0">
-      {window.screen.width < 1100 && <Redirect to="/mobile" />}
       <GlobalStyle />
+      {window.screen.width < 1100 && <Redirect to="/mobile" />}
       <Header />
       <Switch>
         <Route exact path="/" component={Home} />
