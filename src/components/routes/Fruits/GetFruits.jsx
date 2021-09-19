@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { Heading } from "../GlobalStyleComponents";
+import { Heading } from "../../GlobalStyleComponents";
 
 const GetAnimals = ({ name, updateUser }) => {
   const inputEl = useRef("");

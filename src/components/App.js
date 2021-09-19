@@ -2,10 +2,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { useState } from "react";
 import { Redirect, Route, Switch } from "react-router";
 import Footer from "./Footer";
-import Fruits from "./Fruits";
 import { GlobalStyle } from "./GlobalStyle";
 import Header from "./Header";
-import { Home, Name, Mobile } from "./routes";
+import { Fruits, Home, Mobile, Name } from "./routes";
 import SortList from "./SortList";
 
 const App = () => {

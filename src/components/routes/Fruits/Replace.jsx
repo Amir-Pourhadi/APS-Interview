@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { AngleRight, Heading, Text } from "../GlobalStyleComponents";
+import { AngleRight, Heading, Text } from "../../GlobalStyleComponents";
 import Input from "./Input";
 
 const Swap = ({ name, fruits, setDone }) => {

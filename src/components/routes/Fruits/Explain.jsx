@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { useHistory } from "react-router";
-import { Heading } from "../GlobalStyleComponents";
+import { Heading } from "../../GlobalStyleComponents";
 
 const Explain = ({ name, fruit }) => {
   const history = useHistory();

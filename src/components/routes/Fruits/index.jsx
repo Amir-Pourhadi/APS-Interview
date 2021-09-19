@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Main } from "../GlobalStyleComponents";
+import { Main } from "../../GlobalStyleComponents";
 import Explain from "./Explain";
 import GetFruits from "./GetFruits";
 import Replace from "./Replace";
