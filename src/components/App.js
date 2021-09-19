@@ -5,8 +5,7 @@ import Footer from "./Footer";
 import Fruits from "./Fruits";
 import { GlobalStyle } from "./GlobalStyle";
 import Header from "./Header";
-import Mobile from "./Mobile";
-import { Home, Name } from "./routes";
+import { Home, Name, Mobile } from "./routes";
 import SortList from "./SortList";
 
 const App = () => {
