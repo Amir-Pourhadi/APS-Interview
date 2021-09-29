@@ -1,4 +1,5 @@
 [![wakatime](https://wakatime.com/badge/github/Amir-Pourhadi/APS-Interview.svg)](https://wakatime.com/badge/github/Amir-Pourhadi/APS-Interview)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a8117ce0-495e-41a5-830d-03a15245df7f/deploy-status)](https://app.netlify.com/sites/aps-interview/deploys)
 
 # Getting Started with Create React App
 
