@@ -1,6 +1,7 @@
 [![wakatime](https://wakatime.com/badge/github/Amir-Pourhadi/APS-Interview.svg)](https://wakatime.com/badge/github/Amir-Pourhadi/APS-Interview)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/a8117ce0-495e-41a5-830d-03a15245df7f/deploy-status)](https://app.netlify.com/sites/aps-interview/deploys)
 [![Depfu](https://badges.depfu.com/badges/58c0a69fbf46615e9978e7aec20f1776/overview.svg)](https://depfu.com/github/Amir-Pourhadi/APS-Interview?project_id=32239)
+[![Code Grade](https://www.code-inspector.com/project/29260/score/svg)](https://frontend.code-inspector.com/public/project/29260/APS-Interview/dashboard)
 
 # Getting Started with Create React App
 
