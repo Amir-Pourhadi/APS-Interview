@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { AngleRight, Heading, Text } from "../../GlobalStyleComponents";
 import Input from "./Input";
 
-const Swap = ({ name, fruits, setDone }) => {
+const Replace = ({ name, fruits, setDone }) => {
   const [seconds, setSeconds] = useState(13);
 
   useEffect(() => {
@@ -18,8 +18,7 @@ const Swap = ({ name, fruits, setDone }) => {
   return (
     <>
       <Heading>
-        Nice Job {name}! For each fruit, please replace the first letter with the third one (third
-        letter)
+        Nice Job {name}! For each fruit, please replace the first letter with the third one (third letter)
       </Heading>
       <div>
         {fruits.map((fruit, index) => (
@@ -34,4 +33,4 @@ const Swap = ({ name, fruits, setDone }) => {
   );
 };
 
-export default Swap;
+export default Replace;

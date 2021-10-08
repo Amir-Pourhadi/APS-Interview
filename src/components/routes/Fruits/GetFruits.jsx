@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import { Heading } from "../../GlobalStyleComponents";
 
-const GetAnimals = ({ name, updateUser }) => {
+const GetFruits = ({ name, updateUser }) => {
   const inputEl = useRef("");
   const [valid, setValid] = useState(true);
 
@@ -43,4 +43,4 @@ const GetAnimals = ({ name, updateUser }) => {
   );
 };
 
-export default GetAnimals;
+export default GetFruits;
