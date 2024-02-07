@@ -2,12 +2,7 @@
 
   [![wakatime](https://wakatime.com/badge/github/Amir-Pourhadi/APS-Interview.svg)](https://wakatime.com/badge/github/Amir-Pourhadi/APS-Interview)
   [![Netlify Status](https://api.netlify.com/api/v1/badges/a8117ce0-495e-41a5-830d-03a15245df7f/deploy-status)](https://app.netlify.com/sites/aps-interview/deploys)
-  [![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=Amir-Pourhadi_APS-Interview&metric=ncloc)](https://sonarcloud.io/dashboard?id=Amir-Pourhadi_APS-Interview)
-  [![CodeFactor](https://www.codefactor.io/repository/github/amir-pourhadi/aps-interview/badge)](https://www.codefactor.io/repository/github/amir-pourhadi/aps-interview)  
-  [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Amir-Pourhadi_APS-Interview&metric=alert_status)](https://sonarcloud.io/dashboard?id=Amir-Pourhadi_APS-Interview)
-  [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=Amir-Pourhadi_APS-Interview&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=Amir-Pourhadi_APS-Interview)
-  [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=Amir-Pourhadi_APS-Interview&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=Amir-Pourhadi_APS-Interview)
-  [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=Amir-Pourhadi_APS-Interview&metric=security_rating)](https://sonarcloud.io/dashboard?id=Amir-Pourhadi_APS-Interview)
+
 </div>
 
 # Getting Started with Create React App
